@@ -18,7 +18,7 @@ input_data.each { |binary|
   }
 }
 
-for index in (0..11) do
+(0..11).each { |index|
   if zeroes[index] > ones[index]
     most_common[index] = 0
     least_common[index] = 1
@@ -26,7 +26,7 @@ for index in (0..11) do
     most_common[index] = 1
     least_common[index] = 0
   end
-end
+}
 
 gamma_rate = most_common.join.to_i(2)
 epsilon_rate = least_common.join.to_i(2)
